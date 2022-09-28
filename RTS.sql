@@ -42,4 +42,11 @@ INSERT INTO buildings (name) VALUES ("Chata drwala")
 
 
 		#login
-FROM players SELECT id WHERE password LIKE "hasło123" AND email LIKE "mail@gmail.com"
+FROM players SELECT id WHERE password LIKE "hasło123" AND email LIKE "mail@gmail.com" 
+
+
+		#
+SELECT * FROM players 
+JOIN villages ON players.id=villages.players_id 
+JOIN villages_has_resources ON villages.id=villages_has_resources.villages_id 
+WHERE players.id=2 
