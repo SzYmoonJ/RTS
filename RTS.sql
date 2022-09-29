@@ -92,7 +92,7 @@ JOIN troops ON villages_has_troops.troops_id=troops.id
 WHERE players.id=1;
 
 		#budynki
-SELECT players.*, villages.name, buildings.name FROM players 
+SELECT players.nick, villages.name, buildings.name FROM players 
 JOIN villages ON players.id=villages.players_id 
 JOIN villages_has_buildings ON villages.id=villages_has_buildings.villages_id
 JOIN buildings ON villages_has_buildings.buildings_id=buildings.id
